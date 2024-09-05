@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+
+        .invoice-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 30px;
+                   
+        }
+        .subtext h1{
+            letter-spacing: 6px;
+        }
+        .subtext p{
+            color: rgba(0, 0, 0, 0.671);
+            letter-spacing: 2px;
+           
+        }
+        .due-box {
+            position: relative;
+            bottom: 10px;
+           
+        }
+        .logo {
+            width: 160px;
+            height: 40px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin: 10px 0;
+        }
+
+        header p {
+            margin: 5px 0;
+            color: #888;
+        }
+        .total-section {
+            justify-content: flex-end;
+            margin-bottom: 20px;
+            margin-right: 28px;
+            margin-top: 30px;
+        }
+
+        .total-section p {
+            font-size: 14px;
+            font-weight: 600;
+            color: rgba(0, 0, 0, 0.671);
+            text-align: right;
+        }
+
+        .total-section h3 {
+            font-size: 14px;
+            color: #000;
+            text-align: right;
+            letter-spacing: 2px;
+            padding-top: 10px;
+        }
+
+        .billing {
+            display: flex;
+            justify-content: flex-start;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #eee;
+            border-top: 2px solid #eee;
+            padding-bottom: 20px;
+            padding-top: 10px;
+        }
+        .payable-to {
+            margin-left: 100px; /* Adjust the space between the sections */
+        }
+       
+
+        .billing h2 {
+            font-size: 14px;
+            margin-bottom: 10px;
+           
+        }
+
+        .billing p {
+            margin: 5px 0;
+           
+            font-weight: 100; /* Thin font weight */
+            color: rgba(0, 0, 0, 0.671);
+        }
+
+        .invoice-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            margin-top: 50px;
+        }
+
+        .invoice-table th, .invoice-table td {
+            text-align: left;
+            padding: 12px;
+            border: 1px solid #eee;
+            border: none;
+        }
+
+        .invoice-table th {
+            background-color: transparent;
+            font-weight: bold;
+        }
+        .invoice-table tbody tr:nth-child(odd) {
+            background-color: #f5f5f5; /* Color for odd rows */
+        }
+
+        .invoice-table tbody tr:nth-child(even) {
+            background-color: transparent; /* No color for even rows */
+        }
+
+        /* .invoice-table td {
+            background-color: #f9f9f9;
+        } */
+
+        footer {
+            display: flex;
+            justify-content: space-between; /* Distributes space between the left and right sections */
+            align-items: center;
+            padding: 16px 0;
+            color: #888;
+        }
+
+        .footer-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-left .logo {
+            width: 140px; /* Adjust the size of the logo if needed */
+            height: 30px;
+            margin-right: 10px; /* Space between the logo and the title */
+        }
+        .thankscard{
+            text-align: center;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-top: 30px;
+        }
+
+        .footer-left .title {
+            font-size: 18px;
+            margin: 0; /* Remove any default margin */
+        }
+
+        .footer-right {
+            text-align: right;
+        }
+        tbody {
+            color: rgba(0, 0, 0, 0.671);
+            font-size: 14px;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <div class="invoice-container">
+        <header>
+            <img src="images/city_logo.png" alt="Company Logo" class="logo">
+        </header>
+        <div class="subtext">
+            <h1>INVOICE #1234</h1>
+            <p>ISSUED: 06/09/2021</p>
+            <p class="due-box">Due: ON RECEIPT</p>
+        </div>
+
+        <section class="billing">
+            <div class="bill-to">
+                <h2>BILL TO:</h2>
+                <p>Olivia Wilson</p>
+                <p>123 Anywhere St.,</p>
+                <p>Any City, ST 12345</p>
+            </div>
+            <div class="payable-to">
+                <h2>PAYABLE TO:</h2>
+                <p>Bailey Dupont</p>
+                <p>hello@reallygreatsite.com</p>
+                <p>reallygreatsite.com</p>
+            </div>
+        </section>
+       
+
+        <table class="invoice-table">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Description of service goes here</td>
+                    <td>5</td>
+                    <td>$100</td>
+                    <td>$500</td>
+                </tr>
+                <tr>
+                    <td>Description of service goes here</td>
+                    <td>5</td>
+                    <td>$100</td>
+                    <td>$500</td>
+                </tr>
+                <tr>
+                    <td>Description of service goes here</td>
+                    <td>5</td>
+                    <td>$100</td>
+                    <td>$500</td>
+                </tr>
+                <tr>
+                    <td>Description of service goes here</td>
+                    <td>5</td>
+                    <td>$100</td>
+                    <td>$500</td>
+                </tr>
+                <tr>
+                    <td>Description of service goes here</td>
+                    <td>5</td>
+                    <td>$100</td>
+                    <td>$500</td>
+                </tr>
+               
+            </tbody>
+        </table>
+        <div class="total-section">
+           
+            <p>Total Amount: $3500</p>
+            <p>Discount: $500</p>
+            <h3>PAYABLE AMOUNT: $3000</h3>
+           
+        </div>
+        <div class="thankscard">
+            <p>THANK YOU FOR CHOOSING CITYQUEST!....</p>
+        </div>
+
+        <footer>
+            <div class="footer-left">
+                <img src="images/city_logo.png" alt="Company Logo" class="logo">
+               
+            </div>
+            <div class="footer-right">
+                <p>Page 1 of 1</p>
+            </div>
+        </footer>
+       
+    </div>
+</body>
+</html>
+
